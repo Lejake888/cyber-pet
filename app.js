@@ -1,5 +1,5 @@
 let name = prompt("Please enter your name: ");
-alert(`Hello ${name}! Welcome to Cyber Pet!`);
+document.getElementById("log").innerHTML =`Hello ${name}! Welcome to Cyber Pet! This is the log to keep updated on your pet! Make sure you care for your pet<br>`
 let petChoice = prompt("Choose a pet:");
 
 let check = petChoice.toLowerCase();
@@ -17,27 +17,27 @@ class Pet {
         this.feed = this.feed - 10;
         this.drink = this.drink - 10;
         this.energy = this.energy - 15;
-        alert(`${petName} is really happy now! (Fun = ${this.play}), but now it needs a rest (Hunger = ${this.feed}) (Thirst = ${this.drink}) (Energy = ${this.energy})`);
+        document.getElementById("log").innerHTML += `${petName} is really happy now! (Fun = ${this.play}), but now it needs a rest (Hunger = ${this.feed}) (Thirst = ${this.drink}) (Energy = ${this.energy})<br>`
     }
 
     petFeed() {
         this.play = this.play - 20;
         this.feed = 100;
         this.drink = this.drink - 5;
-        alert(`${petName} is now full (Hunger = ${this.feed}) (Fun = ${this.play}) (Thirst = ${this.drink})`);
+        document.getElementById("log").innerHTML +=`${petName} is now full (Hunger = ${this.feed}) (Fun = ${this.play}) (Thirst = ${this.drink})<br>`
     }
 
     petDrink() {
         this.play = this.play - 20;
         this.feed = this.feed - 5;
         this.drink = 100;
-        alert(`${petName} is now very refreshed (Thirst = ${this.drink}) (Fun = ${this.play}) (Hunger = ${this.feed})`);
+        document.getElementById("log").innerHTML +=`${petName} is now very refreshed (Thirst = ${this.drink}) (Fun = ${this.play}) (Hunger = ${this.feed})<br>`
     }
 
     petRest() {
         this.energy = 100;
         this.play = this.play - 50
-        alert(`${petName} is now well rested (Energy = ${this.energy}) but now it wants to play (Fun = ${this.play})`);
+        document.getElementById("log").innerHTML += `${petName} is now well rested (Energy = ${this.energy}) but now it wants to play (Fun = ${this.play})<br>`
     }
 
     check() {
@@ -45,9 +45,9 @@ class Pet {
         //     alert(`${petName} is not feeling so good, sort out its needs`)
         // }
         if (this.play <= 0 || this.feed <= 0 || this.drink <= 0 || this.energy <= 0) {
-            alert(`${petName} ran away because it was neglected :(`)
+            document.getElementById("log").innerHTML += `${petName} ran away because it was neglected :( <br> `
         }
-        alert(`${petName}'s statistics: (Fun = ${this.play}) (Hunger = ${this.feed}) (Thirst = ${this.drink}) (Energy = ${this.energy})`);
+        document.getElementById("log").innerHTML +=`${petName}'s statistics: (Fun = ${this.play}) (Hunger = ${this.feed}) (Thirst = ${this.drink}) (Energy = ${this.energy})<br>`
     }
 }
 
@@ -60,7 +60,7 @@ class Cat extends Pet {
         this.feed = this.feed - 15;
         this.drink = this.drink - 15;
         this.energy = this.energy - 15;
-        alert(`${petName} is climbing so high up! Look at it go! (Fun = ${this.play}) but now it's used up a lot of energy (Hunger = ${this.feed}) (Thirst = ${this.drink}) (Energy = ${this.energy})`);
+        document.getElementById("log").innerHTML += `${petName} is climbing so high up! Look at it go! (Fun = ${this.play}) but now it's used up a lot of energy (Hunger = ${this.feed}) (Thirst = ${this.drink}) (Energy = ${this.energy})<br>`
 
     }
     hunt() {
@@ -68,7 +68,7 @@ class Cat extends Pet {
         this.feed = this.feed + 10;
         this.drink = this.drink - 10;
         this.energy = this.energy - 25;
-        alert(`${petName} found a bird! Disgusting... but well done (Fun = ${this.play}) (Hunger = ${this.feed}) but now it's very tired (Thirst = ${this.drink}) (Energy = ${this.energy})`);
+        document.getElementById("log").innerHTML += `${petName} found a bird! Disgusting... but well done (Fun = ${this.play}) (Hunger = ${this.feed}) but now it's very tired (Thirst = ${this.drink}) (Energy = ${this.energy})<br>`
     }
 }
 
@@ -82,14 +82,14 @@ class Dog extends Pet {
         this.feed = this.feed - 20;
         this.drink = this.drink - 20;
         this.energy = this.energy - 30;
-        alert(`What a good doggy! ${petName} is great at catch! (Fun = ${this.play}) but now it's tired (Hunger = ${this.feed}) (Thirst = ${this.drink}) (Energy = ${this.energy})`)
+        document.getElementById("log").innerHTML += `What a good doggy! ${petName} is great at catch! (Fun = ${this.play}) but now it's tired (Hunger = ${this.feed}) (Thirst = ${this.drink}) (Energy = ${this.energy})<br>`
     }
     walk() {
         this.play = this.play + 10;
         this.drink = this.drink - 10;
         this.feed = this.feed - 10;
         this.energy = this.energy - 20;
-        alert(`${petName} was very well behaved! (Fun = ${this.play}) but now it's tired (Hunger = ${this.feed}) (Thirst = ${this.drink}) Energy = ${this.energy})`)
+        document.getElementById("log").innerHTML += `${petName} was very well behaved! (Fun = ${this.play}) but now it's tired (Hunger = ${this.feed}) (Thirst = ${this.drink}) Energy = ${this.energy})<br>`
 
     }
     train() {
@@ -98,7 +98,7 @@ class Dog extends Pet {
         this.feed = this.feed - 40;
         this.drink = this.drink - 40;
         this.energy = this.energy - 40;
-        alert(`${petName} is so well behaved and clever! (Skill = ${this.skill}) It's now very tired though! (Fun = ${this.play} (Hunger = ${this.feed}) (Thirst = ${this.drink}) Energy = ${this.energy})`)
+        document.getElementById("log").innerHTML += `${petName} is so well behaved and clever! (Skill = ${this.skill}) It's now very tired though! (Fun = ${this.play} (Hunger = ${this.feed}) (Thirst = ${this.drink}) Energy = ${this.energy})<br>`
     
     }
     // teachNewSkill() {
@@ -126,7 +126,7 @@ class Rabbit extends Pet {
         this.drink = this.drink - 10;
         this.feed = this.feed - 10;
         this.energy = this.energy -20;
-        alert(`${petName} is hopping mad! Look at it go! (Fun = ${this.play}) but now it's tired and needs food and a drink (Hunger = ${this.feed}) (Thirst = ${this.drink}) (Energy = ${this.energy})`)
+        document.getElementById("log").innerHTML += `${petName} is hopping mad! Look at it go! (Fun = ${this.play}) but now it's tired and needs food and a drink (Hunger = ${this.feed}) (Thirst = ${this.drink}) (Energy = ${this.energy})<br>`
 
     }
 
@@ -141,7 +141,7 @@ if (check == "cat") {
     alert(`Good choice! What a lovely cat!`);
     petName = prompt(`What do you want to call your cat?`);
     pet1 = new Cat(petName);
-    alert(`Current statistics: Watch these levels! (Fun = ${pet1.play}) (Hunger = ${pet1.feed}) (Thirst = ${pet1.drink}) (Energy = ${pet1.energy})`);
+    document.getElementById("log").innerHTML += `Current statistics: Watch these levels! (Fun = ${pet1.play}) (Hunger = ${pet1.feed}) (Thirst = ${pet1.drink}) (Energy = ${pet1.energy}) <br>`
     document.getElementById('cat').style.visibility = 'visible';
     document.getElementById('dog').remove();
     document.getElementById('rabbit').remove();
