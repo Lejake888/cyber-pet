@@ -1,5 +1,5 @@
 let name = prompt("Please enter your name: ");
-document.getElementById("log").innerHTML =`Hello ${name}! Welcome to Cyber Pet! This is the log to keep updated on your pet! Make sure you care for your pet<br>`
+document.getElementById("log").innerHTML =`Hello ${name}! Welcome to Cyber Pet! This is the log to keep updated on your pet! Make sure you care for your pet!<br>`
 let petChoice = prompt("Choose a pet:");
 
 let check = petChoice.toLowerCase();
@@ -142,6 +142,7 @@ if (check == "cat") {
     petName = prompt(`What do you want to call your cat?`);
     pet1 = new Cat(petName);
     document.getElementById("log").innerHTML += `Current statistics: Watch these levels! (Fun = ${pet1.play}) (Hunger = ${pet1.feed}) (Thirst = ${pet1.drink}) (Energy = ${pet1.energy}) <br>`
+    document.getElementById("nameOfPet").innerHTML = "Name: " + pet1.name;
     document.getElementById('cat').style.visibility = 'visible';
     document.getElementById('dog').remove();
     document.getElementById('rabbit').remove();
@@ -150,6 +151,7 @@ else if (check == "dog") {
     alert(`Good choice! What a fluffy dog!`);
     petName = prompt(`What do you want to call your dog?`);
     pet1 = new Dog(petName);
+    document.getElementById("nameOfPet").innerHTML = "Name: " + pet1.name;
     alert(`Current statistics: Watch these levels! (Fun = ${pet1.play}) (Hunger = ${pet1.feed}) (Thirst = ${pet1.drink}) (Energy = ${pet1.energy})`);
     document.getElementById('dog').style.visibility = 'visible';
     document.getElementById('cat').remove();
@@ -161,6 +163,7 @@ else if (check == "rabbit") {
     petName = prompt(`What do you want to call your rabbit?`);
     pet1 = new Rabbit(petName);
     alert(`Current statistics: Watch these levels! (Fun = ${pet1.play}) (Hunger = ${pet1.feed}) (Thirst = ${pet1.drink}) (Energy = ${pet1.energy})`);
+    document.getElementById("nameOfPet").innerHTML = "Name: " + pet1.name;
     document.getElementById('rabbit').style.visibility = 'visible';
     document.getElementById('cat').remove();
     document.getElementById('dog').remove();
