@@ -1,0 +1,46 @@
+body {
+    background-color: rgb(151, 221, 245);
+}
+
+header {
+    background-color: rgb(181, 235, 208);   
+    border-style: ridge;
+    border-color: black;
+    color: black;
+    text-align: center;
+
+}
+
+button {
+    color:black;
+    border-radius:7px;
+    text-align: center;
+    width:120px;
+    height:30px;
+    border: 2px solid black;
+    font-size: 10px;
+}
+
+h2 {
+    color: black;
+}
+
+#cat {
+    visibility: hidden;
+    
+}
+
+#dog {
+    visibility: hidden;
+}
+
+#rabbit {
+    visibility: hidden;
+}
+
+img {
+    padding:20px;
+    width:120px;
+    height:170px;
+    margin-left: 50px
+}
