@@ -165,6 +165,7 @@
 //     alert (`Sorry we do not have a ${check}`)
 // }
 
+let enterButton = document.getElementById("enterButton")
 
 class Pet {
     constructor(petChoice, petName) {
@@ -177,6 +178,10 @@ class Pet {
     }
 }
 
+const loadGame = () => {
+    document.getElementById("game").innerHTML='<object type="text/html" data="index.html" ></object>';
+}
+
 const setValues = () => {
     let name = document.getElementById("name").value.toLowerCase()
     let petChoice = document.getElementById("petChoice").value.toLowerCase()
@@ -186,9 +191,12 @@ const setValues = () => {
     if (pet.type != "cat" && pet.type != "dog" && pet.type != "rabbit") {
         console.log("We don't have that type of pet")
     }
+    else {
+        console.log("Welcome")
+    }
 }
-let enterButton = document.getElementById("enterButton")
 
 enterButton.addEventListener("click", () => {
     setValues()
+    loadGame()
 });
