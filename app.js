@@ -1,6 +1,10 @@
-let name = prompt("Please enter your name: ");
-document.getElementById("log").innerHTML =`Hello ${name}! Welcome to Cyber Pet! This is the log to keep updated on your pet! Make sure you care for your pet!<br>`
-let petChoice = prompt("Choose a pet:");
+// let name = prompt("Please enter your name: ");
+// document.getElementById("log").innerHTML =`Hello ${name}! Welcome to Cyber Pet! This is the log to keep updated on your pet! Make sure you care for your pet!<br>`
+// let petChoice = prompt("Choose a pet:");
+
+// let name = document.getElementById('input').value;
+// document.getElementById('input').innerHTML = name;
+// let petChoice = prompt("Choose a pet:");
 
 let check = petChoice.toLowerCase();
 
