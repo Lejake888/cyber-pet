@@ -101,19 +101,6 @@ class Dog extends Pet {
         document.getElementById("log").innerHTML += `${petName} is so well behaved and clever! (Skill = ${this.skill}) It's now very tired though! (Fun = ${this.play} (Hunger = ${this.feed}) (Thirst = ${this.drink}) Energy = ${this.energy})<br>`
     
     }
-    // teachNewSkill() {
-    //     if (this.skill >= 5) {
-    //         choice = prompt(`${petName} can learn a new skill: Sit, Roll Over, Play Dead`)
-    //         let trick = choice.toLowerCase();
-    //         if (trick == "sit" || trick == "roll over" || trick == "play dead") {
-    //             skill = choice.push(trick)
-    //         }
-    //     }
-    //     else {
-    //         alert(`You need more skill points to learn a new skill `)
-    //     }
-    // }
-
 }
 
 class Rabbit extends Pet {
@@ -172,12 +159,3 @@ else if (check == "rabbit") {
 else {
     alert (`Sorry we do not have a ${check}`)
 }
-
-// To do list:
-
-// Sort out socialise option for rabbits
-// Make skills component effect dog
-// Cat additions:
-// Dog additions: Train
-// Rabbit additions:
-// General additions: Wash
