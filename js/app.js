@@ -165,11 +165,24 @@
 //     alert (`Sorry we do not have a ${check}`)
 // }
 
+
+class Pet {
+    constructor(petChoice, petName) {
+        this.name = petName;
+        this.type = petChoice
+        this.play = 100;
+        this.feed = 100;
+        this.drink = 100;
+        this.energy = 100;
+    }
+}
+
 const setValues = () => {
     let name = document.getElementById("name").value
     let petChoice = document.getElementById("petChoice").value
     let petName = document.getElementById("petName").value
-    let pet = new Pet(name, petChoice, petName)
+    let pet = new Pet(petChoice, petName)
+    console.log(pet)
 }
 let enterButton = document.getElementById("enterButton")
 
