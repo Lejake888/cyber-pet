@@ -178,11 +178,14 @@ class Pet {
 }
 
 const setValues = () => {
-    let name = document.getElementById("name").value
-    let petChoice = document.getElementById("petChoice").value
-    let petName = document.getElementById("petName").value
+    let name = document.getElementById("name").value.toLowerCase()
+    let petChoice = document.getElementById("petChoice").value.toLowerCase()
+    let petName = document.getElementById("petName").value.toLowerCase()
     let pet = new Pet(petChoice, petName)
     console.log(pet)
+    if (pet.type != "cat" && pet.type != "dog" && pet.type != "rabbit") {
+        console.log("We don't have that type of pet")
+    }
 }
 let enterButton = document.getElementById("enterButton")
 
