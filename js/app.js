@@ -178,10 +178,6 @@ class Pet {
     }
 }
 
-const loadGame = () => {
-    document.getElementById("game").innerHTML='<object type="text/html" data="index.html" ></object>';
-}
-
 const setValues = () => {
     let name = document.getElementById("name").value.toLowerCase()
     let petChoice = document.getElementById("petChoice").value.toLowerCase()
@@ -195,8 +191,3 @@ const setValues = () => {
         console.log("Welcome")
     }
 }
-
-enterButton.addEventListener("click", () => {
-    setValues()
-    loadGame()
-});
